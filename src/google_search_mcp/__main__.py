@@ -260,7 +260,7 @@ def main() -> None:
     
     # Configure proxy if provided
     if PROXY_URL:
-        client_config['proxies'] = PROXY_URL
+        client_config['proxy'] = PROXY_URL
         logger.info(f"Using proxy: {PROXY_URL}")
     
     # Validate required environment variables
