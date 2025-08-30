@@ -42,8 +42,8 @@ client_config: Dict[str, Any] = {
 }
 
 @mcp.tool()
-async def search(query: Annotated[str, "Search query string (required)"], 
-                 num: Annotated[int, "Number of results to return (1-10, default: 5)"] = 5) -> List[Dict[str, str]]:
+async def google_search(query: Annotated[str, "Search query string (required)"], 
+                        num: Annotated[int, "Number of results to return (1-10, default: 5)"] = 5) -> List[Dict[str, str]]:
     """
     Perform a web search using Google Custom Search API.
     

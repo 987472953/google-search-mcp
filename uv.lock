@@ -406,7 +406,7 @@ wheels = [
 
 [[package]]
 name = "google-search-mcp"
-version = "0.1.0"
+version = "0.1.1"
 source = { editable = "." }
 dependencies = [
     { name = "beautifulsoup4" },
@@ -429,7 +429,7 @@ dev = [
 requires-dist = [
     { name = "beautifulsoup4", specifier = ">=4.12.0" },
     { name = "black", marker = "extra == 'dev'", specifier = ">=23.0.0" },
-    { name = "fastmcp", specifier = ">=0.1.0" },
+    { name = "fastmcp", specifier = ">=2.11.3" },
     { name = "flake8", marker = "extra == 'dev'", specifier = ">=6.0.0" },
     { name = "httpx", extras = ["socks"], specifier = ">=0.25.0" },
     { name = "isort", marker = "extra == 'dev'", specifier = ">=5.12.0" },

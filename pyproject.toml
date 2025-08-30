@@ -8,7 +8,7 @@ description = "Google Search MCP Server - A Python implementation using FastMCP 
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
-dynamic = ["version"]
+version = "0.1.1"
 authors = [
     {name = "Google Search MCP"}
 ]

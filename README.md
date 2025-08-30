@@ -5,7 +5,7 @@
 ## 功能
 
 - 搜索
-    - search 执行 Google 搜索
+    - google_search 执行 Google 搜索
     - read_webpage 提取网页内容
 
 - 搜索功能
