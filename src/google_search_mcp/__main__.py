@@ -32,7 +32,7 @@ PROXY_URL: Optional[str] = None
 # Initialize FastMCP
 mcp = FastMCP("Google Search Server")
 
-# Configure HTTP client with proxy support
+# Configure HTTP client base configuration
 client_config: Dict[str, Any] = {
     'timeout': 30.0,
     'follow_redirects': True,
@@ -40,10 +40,6 @@ client_config: Dict[str, Any] = {
         'User-Agent': 'Google-Search-MCP/0.1.0 (Python)'
     }
 }
-
-if PROXY_URL:
-    client_config['proxies'] = PROXY_URL
-    logger.info(f"Using proxy: {PROXY_URL}")
 
 @mcp.tool()
 async def search(query: Annotated[str, "Search query string (required)"], 
@@ -261,6 +257,11 @@ def main() -> None:
     API_KEY = os.getenv('GOOGLE_API_KEY')
     SEARCH_ENGINE_ID = os.getenv('GOOGLE_SEARCH_ENGINE_ID')
     PROXY_URL = os.getenv('PROXY_URL')
+    
+    # Configure proxy if provided
+    if PROXY_URL:
+        client_config['proxies'] = PROXY_URL
+        logger.info(f"Using proxy: {PROXY_URL}")
     
     # Validate required environment variables
     if not API_KEY:
