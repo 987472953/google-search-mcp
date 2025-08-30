@@ -29,7 +29,7 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 dependencies = [
-    "fastmcp>=0.1.0",
+    "fastmcp>=2.11.3",
     "httpx[socks]>=0.25.0",
     "beautifulsoup4>=4.12.0",
     "lxml>=4.9.0",
